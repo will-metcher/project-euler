@@ -1,6 +1,6 @@
 import string
 
-f = open("txt/p022_names.txt",'r')
+f = open("../txt/p022_names.txt",'r')
 names = f.read()
 names = names.replace('"',"")
 names = names.split(",")
