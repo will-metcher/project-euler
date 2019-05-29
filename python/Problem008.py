@@ -9,6 +9,7 @@ for i in range(0, len(num) - 13):
     product = 1
     for j in range(i, i+13):
         test = num[j:j+1]
+        print(test)
         product *= int(test)
     if product > largest:
         largest = product
