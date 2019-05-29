@@ -2,6 +2,7 @@ import string
 
 f = open("../txt/p022_names.txt",'r')
 names = f.read()
+f.close()
 names = names.replace('"',"")
 names = names.split(",")
 names.sort()
