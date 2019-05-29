@@ -1,26 +1,25 @@
-startingNumber = 1
-result = startingNumber
 maximum = 1000000
+#start, sequence length
+largest_pair = [0,0]
 
-longestChain = -1
-
-while startingNumber < maximum:
-    count = 1
-    while result != 1:
-        if result % 2 == 0:
-            result = result / 2
+def collatz(start):
+    length = 0
+    while start != 1:
+        if start % 2 == 0:
+            start /= 2
         else:
-            result = (3 * result) + 1
-        count += 1
+            start = (3 * start) + 1
+        length += 1
+    return length
 
-    if count > longestChain:
-        longestChain = startingNumber
+for i in range(1,maximum):
+    c = collatz(i)
+    if c > largest_pair[1]:
+        largest_pair[0] = i
+        largest_pair[1] = c
 
-    startingNumber += 1
-    result = startingNumber
+print(largest_pair[0],largest_pair[1])
 
-
-print("The starting number with longest chain is:",longestChain, count)
 
 
 
