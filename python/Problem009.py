@@ -1,9 +1,10 @@
 #31875000 in 0.09293699264526367 seconds.
 import time
+
 start = time.time()
 
 def is_triplet(a,b,c):
-    return a ** 2 + b ** 2 == c ** 2
+    return a**2 + b**2 == c**2
 
 
 for a in range(1,1000):

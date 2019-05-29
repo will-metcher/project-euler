@@ -2,13 +2,12 @@ maximum = 1000000
 #start, sequence length
 largest_pair = [0,0]
 
-def collatz(start):
-    length = 0
+def collatz(start, length=0):
     while start != 1:
         if start % 2 == 0:
             start /= 2
         else:
-            start = (3 * start) + 1
+            start = 3*start + 1
         length += 1
     return length
 

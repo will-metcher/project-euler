@@ -4,7 +4,7 @@ tens = ["ten","twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty"
 
 total = 0
 
-def calcLength(n, length=0):
+def calc_length(n, length=0):
     n = str(n)
 
     #thousands
@@ -17,7 +17,7 @@ def calcLength(n, length=0):
     if len(n) == 3:
         length += len(numerals[int(n[0])-1])
         length += len("hundred")
-        if not int(n) % 100 == 0:
+        if int(n) % 100 is not 0:
             length += len("and")
         n = n[1:].lstrip("0")
 
@@ -37,7 +37,7 @@ def calcLength(n, length=0):
     return length
 
 
-for i in range(0,1001):
-    total += calcLength(i)
+for i in range(1,1001):
+    total += calc_length(i)
     
 print(total)

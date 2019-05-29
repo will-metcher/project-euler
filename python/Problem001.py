@@ -1,5 +1,6 @@
 #233168 in 0.0019731521606445312
 import time
+
 start = time.time()
 
 largest = 1000
@@ -10,4 +11,4 @@ for i in range(largest):
         count += i
 
 end = time.time()
-print(count,"in",end-start)
+print(count, "in", end-start)

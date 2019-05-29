@@ -8,4 +8,4 @@ def add_digits(n, total=0):
         total += int(i)
     return total
 
-print(add_digits(calcFactorial(number)))
+print(add_digits(calc_factorial(number)))
