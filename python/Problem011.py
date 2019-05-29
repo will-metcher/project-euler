@@ -1,7 +1,7 @@
 import time
  
 start = time.time()
- 
+
 L = []
 L.append("08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08")
 L.append("49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00")
@@ -24,30 +24,3 @@ L.append("20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16")
 L.append("20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54")
 L.append("01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48")
  
-M = [i.split() for i in L]
-M = [[int(j) for j in i] for i in M]
- 
-max_prod = 0
- 
-for i in range(20):
-    for j in range(16):
-        prod = M[i][j]*M[i][j+1]*M[i][j+2]*M[i][j+3]
-        if prod > max_prod:
-            max_prod = prod
-        prod = M[j][i]*M[j+1][i]*M[j+2][i]*M[j+3][i]
-        if prod > max_prod:
-            max_prod = prod
- 
-for i in range(16):
-    for j in range(16):
-        prod = M[i][j]*M[i+1][j+1]*M[i+2][j+2]*M[i+3][j+3]
-        if prod > max_prod:max_prod = prod
-for i in range(3,20):
-    for j in range(16):
-        prod = M[i][j]*M[i-1][j+1]*M[i-2][j+2]*M[i-3][j+3]
-        if prod > max_prod:
-            max_prod = prod
- 
-elapsed = (time.time() - start)
- 
-print("%s found in %s seconds" % (max_prod,elapsed))

@@ -1,3 +1,7 @@
+#4613732 in 0.0
+import time
+start = time.time()
+
 maximum = 4000000
 term1 = 1
 term2 = 2
@@ -10,5 +14,6 @@ while term1 < maximum or term2 < maximum:
         total += term2
     term1 += term2
     term2 += term1
-    
-print("Total:",total)
+
+end = time.time() 
+print(total,"in",end-start)

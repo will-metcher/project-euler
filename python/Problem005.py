@@ -12,9 +12,8 @@ def evenlyDivisible(num):
             return False
     return True
 
-if __name__ == '__main__':
-    for i in range(2520, 999999999, 2520):
-        if evenlyDivisible(i):
-            end = time.time()
-            print("Answer:",i,"in", end-start,"seconds.")
-            break
+for i in range(2520, 999999999, 2520):
+    if evenlyDivisible(i):
+        end = time.time()
+        print("Answer:",i,"in", end-start,"seconds.")
+        break

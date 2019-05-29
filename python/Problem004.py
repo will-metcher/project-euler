@@ -1,10 +1,6 @@
-largest = 0
+from EulerUtils import *
 
-def isPalindromic(string):
-    if string == string[::-1]:
-        return True
-    else:
-        return False
+largest = 0
 
 for x in range(100,1000):
     for y in range(100,1000):
