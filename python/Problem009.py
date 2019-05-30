@@ -15,4 +15,5 @@ for a in range(1,1000):
         if is_triplet(a,b,c):
             end = time.time()
             print(a*b*c,"in",end-start,"seconds.")
+            print(a,b,c)
             break
