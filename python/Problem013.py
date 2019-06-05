@@ -1,3 +1,8 @@
+#5537376230 in 0.0
+import time
+
+start = time.time()
+
 nums = [
     37107287533902102798797998220837590246510135740250,
     46376937677490009712648124896970078050417018260538,
@@ -106,4 +111,4 @@ total = 0
 for x in range(0,len(nums)):
     total += nums[x]
 
-print(str(total)[0:10])
+print(str(total)[0:10],"in",time.time()-start)

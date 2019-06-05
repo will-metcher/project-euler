@@ -1,3 +1,8 @@
+#21124 in 0.011998653411865234
+import time
+
+start = time.time()
+
 numerals = ["one","two","three","four","five","six","seven","eight","nine"]
 teens = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
 tens = ["ten","twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
@@ -40,4 +45,4 @@ def calc_length(n, length=0):
 for i in range(1,1001):
     total += calc_length(i)
     
-print(total)
+print(total,"in",time.time()-start)

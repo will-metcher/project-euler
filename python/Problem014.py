@@ -1,3 +1,8 @@
+#Start: 837799 Length: 524 in 32.21921443939209
+import time
+
+start = time.time()
+
 maximum = 1000000
 #start, sequence length
 largest_pair = [0,0]
@@ -17,7 +22,7 @@ for i in range(1,maximum):
         largest_pair[0] = i
         largest_pair[1] = c
 
-print(largest_pair[0],largest_pair[1])
+print("Start:",largest_pair[0],"Length:",largest_pair[1],"in",time.time()-start)
 
 
 
