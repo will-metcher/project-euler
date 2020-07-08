@@ -30,6 +30,18 @@ public class Utils {
 			i++;
 		}
 		return count * 2;
-		
+	}
+	
+	public static String LStrip(String string, char character) {
+		char[] chars = string.toCharArray();
+		String newString = "";
+		for (int i = 0; i < chars.length; i++) {
+			if(chars[i] == character) {
+				newString += "";
+			} else {
+				return newString + string.substring(i);
+			}
+		}
+		return newString;
 	}
 }
