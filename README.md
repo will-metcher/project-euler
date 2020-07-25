@@ -1,1 +1,1 @@
-# project-euler-python
+# project-euler https://projecteuler.net/
