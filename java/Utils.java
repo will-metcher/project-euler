@@ -39,6 +39,18 @@ public class Utils {
 		return count * 2;
 	}
 	
+	public static List<Integer> getFactors(int n) {
+		List<Integer> factors = new ArrayList<Integer>();
+		int i = 1;
+		while(i < n) {
+			if(n % i == 0) {
+				factors.add(i);
+			}
+			i++;
+		}
+		return factors;
+	}
+	
 	/**
 	 * Removes leading characters from string
 	 * 
