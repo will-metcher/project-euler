@@ -1,13 +1,20 @@
 package main;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Utils {
+	
 	public static boolean isPalindrome(String n) {
 		if (n.equals(new StringBuffer(n).reverse().toString())) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	public static boolean isPrime(int n) {
 		if(n % 2 == 0 && n > 2) {
 			return false;
@@ -32,6 +39,13 @@ public class Utils {
 		return count * 2;
 	}
 	
+	/**
+	 * Removes leading characters from string
+	 * 
+	 * @param string string to perform on
+	 * @param character the character to remove
+	 * @return new string with leading characters removed
+	 */
 	public static String LStrip(String string, char character) {
 		char[] chars = string.toCharArray();
 		String newString = "";
@@ -43,5 +57,25 @@ public class Utils {
 			}
 		}
 		return newString;
+	}
+	
+	public static String getProjectPath() {
+		return new File("").getAbsolutePath();
+	}
+	
+	public static List<String> loadFile(String fileName) {
+		try {
+			File file = new File(getProjectPath()+"\\txt\\"+fileName+".txt");
+			Scanner scanner = new Scanner(file);
+			List<String> lines = new ArrayList<String>();
+			while(scanner.hasNextLine()) {
+				lines.add(scanner.nextLine());
+			}
+			scanner.close();
+			return lines;
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }
