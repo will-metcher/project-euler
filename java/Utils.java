@@ -9,10 +9,7 @@ import java.util.Scanner;
 public class Utils {
 	
 	public static boolean isPalindrome(String n) {
-		if (n.equals(new StringBuffer(n).reverse().toString())) {
-			return true;
-		}
-		return false;
+		return n.equals(new StringBuffer(n).reverse().toString());
 	}
 
 	public static boolean isPrime(int n) {
